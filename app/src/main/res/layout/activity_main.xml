@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="net.iplanet.simpledrupal7login.MainActivity">
+
+    <ScrollView
+        android:id="@+id/login_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/email_login_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:text="User:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:id="@+id/lblUser" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtUser"
+                android:textColor="?attr/editTextColor"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/lblUser" />
+
+            <TextView
+                android:text="Session name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblSessionName"
+                android:layout_below="@+id/lblUser"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="16dp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:ems="10"
+                android:id="@+id/mTxtSessionName"
+                android:textSize="14sp"
+                android:layout_below="@+id/lblSessionName"
+                android:layout_alignParentStart="true"
+                android:enabled="false" />
+
+            <TextView
+                android:text="Session ID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mTxtSessionName"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="18dp"
+                android:id="@+id/lblSessionId" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:ems="10"
+                android:id="@+id/mTxtSessionId"
+                android:textSize="14sp"
+                android:layout_below="@+id/lblSessionId"
+                android:layout_alignParentStart="true"
+                android:enabled="false" />
+
+            <TextView
+                android:text="Token"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:id="@+id/lblToken"
+                android:layout_below="@+id/mTxtSessionId"
+                android:layout_alignParentStart="true" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:ems="10"
+                android:layout_below="@+id/lblToken"
+                android:layout_alignParentStart="true"
+                android:id="@+id/mTxtToken"
+                android:textSize="14sp"
+                android:enabled="false" />
+
+            <Button
+                android:text="Logout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnLogout"
+                tools:text="Logout"
+                android:onClick="logout_click"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
